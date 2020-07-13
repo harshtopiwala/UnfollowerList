@@ -1,0 +1,122 @@
+ScreenManagement:
+    StartScreen:
+
+<StartScreen>:
+    name: "start"
+    firstInput: firstInput
+    secondInput: secondInput
+    btn1: btn1
+    label1: label1
+
+
+    canvas:
+        Color:
+            rgba: 118/255, 234/255, 215/255, 1
+        Line:
+            width: 2.
+            #rectangle: (self.x, self.y, self.width, self.height)
+            rectangle: (30, 30, 420, 350)
+
+
+
+    Image:
+        source: "images/instagram2.png"
+        size_hint: (None, None)
+        width: 50
+        height: 50
+        pos: 70,420  #70,550
+        allow_stretch: True
+
+    Label:
+        text: "UnfollowersList"
+        color: 57/255, 62/255, 70/255, 0.9
+        font_name: "fonts/KeepCalm-Medium"
+        font_size: 30
+        pos: 189, 389  #190, 520
+        size_hint:(None, None)
+
+    Label:  #main
+        text: "UnfollowersList"
+        color: 196/255, 251/255, 109/255, 1
+        font_name: "fonts/KeepCalm-Medium"
+        font_size: 30
+        pos: 190, 390  #190, 520
+        size_hint:(None, None)
+
+
+
+    Label:
+        text: "(Copyright by: HARSH TOPIWALA)"
+        color: 57/255, 62/255, 70/255, 1
+        font_size: 11
+        pos: 190, 365   #190, 495
+        bold: False
+        size_hint:(None, None)
+
+#......................................................
+
+    Label:
+        text: "Enter 'followings' file name: "
+        color: 57/255, 62/255, 70/255, 1
+        font_size: 17
+        pos: 190, 290   #190, 420
+        bold: False
+        size_hint:(None, None)
+
+    TextInput:
+        id: firstInput
+        size_hint: (None, None)
+        pos: 165, 290  #165, 420
+        height: 30
+        width: 150
+        text: "following.txt"
+
+#.......................................................
+
+    Label:
+        text: "Enter 'followers' file name: "
+        color: 57/255, 62/255, 70/255, 1
+        font_size: 17
+        pos: 190, 200   #190, 330
+        bold: False
+        size_hint:(None, None)
+
+    TextInput:
+        id: secondInput
+        size_hint: (None, None)
+        pos: 165, 200
+        height: 30
+        width: 150
+        text: "followers.txt"
+
+#...................................................
+
+    Label:
+        text: "Click to generate the list: "
+        color: 57/255, 62/255, 70/255, 1
+        font_size: 17
+        pos: 190, 110   #190, 240
+        size_hint:(None, None)
+
+    Button:
+        id:btn1
+        background_normal: "images/textfile.png"
+        height: 64
+        width: 64
+        size_hint: (None,None)
+        pos: 205, 75  #205, 205
+        on_press: root.wait()
+        on_release: root.generator()
+
+    Label:
+        id: label1
+        color: 57/255, 62/255, 70/255, 1
+        text: "."
+        size_hint: (None, None)
+        pos: 190, 10   #190, 130
+
+#....................................................................
+
+
+
+
